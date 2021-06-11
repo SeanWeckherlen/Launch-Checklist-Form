@@ -20,15 +20,19 @@ window.addEventListener("load", function () {
          //console.log(json);
          let missionTarget = document.getElementById("missionTarget");
 
+         const random = Math.floor(Math.random() * json.length);
+         randomPlanet = json[random];
+
+
          missionTarget.innerHTML = `<h2>Mission Destination</h2>
          <ol>
-            <li>Name: ${json[0].name}</li>
-            <li>Diameter: ${json[0].diameter}</li>
-            <li>Star: ${json[0].star}</li>
-            <li>Distance from Earth: ${json[0].distance}</li>
-            <li>Number of Moons: ${json[0].moons}</li>
+            <li>Name: ${randomPlanet.name}</li>
+            <li>Diameter: ${randomPlanet.diameter}</li>
+            <li>Star: ${randomPlanet.star}</li>
+            <li>Distance from Earth: ${randomPlanet.distance}</li>
+            <li>Number of Moons: ${randomPlanet.moons}</li>
          </ol>
-         <img src="${json[0].image}">
+         <img src="${randomPlanet.image}">
       `;
       });
    });
