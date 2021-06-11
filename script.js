@@ -23,7 +23,6 @@ window.addEventListener("load", function () {
          const random = Math.floor(Math.random() * json.length);
          randomPlanet = json[random];
 
-
          missionTarget.innerHTML = `<h2>Mission Destination</h2>
          <ol>
             <li>Name: ${randomPlanet.name}</li>
@@ -32,8 +31,7 @@ window.addEventListener("load", function () {
             <li>Distance from Earth: ${randomPlanet.distance}</li>
             <li>Number of Moons: ${randomPlanet.moons}</li>
          </ol>
-         <img src="${randomPlanet.image}">
-      `;
+         <img src="${randomPlanet.image}"/> `;
       });
    });
 
@@ -92,17 +90,3 @@ window.addEventListener("load", function () {
    });
 });
 
-
-
-
-/* This block of code shows how to format the HTML once you fetch some planetary JSON!
-<h2>Mission Destination</h2>
-<ol>
-   <li>Name: ${}</li>
-   <li>Diameter: ${}</li>
-   <li>Star: ${}</li>
-   <li>Distance from Earth: ${}</li>
-   <li>Number of Moons: ${}</li>
-</ol>
-<img src="${}">
-*/
